@@ -10,7 +10,6 @@ public class CreateXmlByJSONRouter extends RouteBuilder {
 	public void configure() throws Exception {
 		from("jetty:http://localhost:9999/")
 		.routeId("MYROUTE9999")
-		.log("receive request body ${body}")
 		.unmarshal()
 		.json()
 		.marshal()
